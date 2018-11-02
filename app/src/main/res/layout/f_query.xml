@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/gray_ffeff0f0"
+            android:paddingLeft="@dimen/px40"
+            android:paddingRight="@dimen/px40"
+            tools:ignore="MissingConstraints">
+
+
+            <com.flyco.roundview.RoundLinearLayout
+                android:id="@+id/fy_zxing"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/px50"
+                android:layout_marginBottom="@dimen/px50"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/px30"
+                android:gravity="center"
+                app:rv_cornerRadius="@dimen/px10"
+                app:rv_strokeColor="@color/blue_2486B6"
+                app:rv_strokeWidth="@dimen/px1">
+
+
+                <ImageView
+                    android:background="@mipmap/scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/px20"
+                    style="@style/Tv15blue"
+                    android:gravity="center_horizontal"
+                    android:text="@string/scan" />
+
+            </com.flyco.roundview.RoundLinearLayout>
+
+            <ImageView
+                android:layout_marginTop="@dimen/px50"
+                android:id="@+id/iv_materiel"
+                android:layout_width="167dp"
+                android:layout_height="170dp"
+                android:background="@mipmap/query_materialtracking"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fy_zxing"
+                app:layout_constraintRight_toLeftOf="@+id/iv_product"/>
+
+            <TextView
+                style="@style/Tv15black"
+                android:text="@string/material_tracking"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_materiel"
+                app:layout_constraintLeft_toLeftOf="@+id/iv_materiel"
+                app:layout_constraintRight_toRightOf="@+id/iv_materiel"
+                app:layout_constraintTop_toTopOf="@+id/iv_materiel"
+                app:layout_constraintVertical_bias="0.805" />
+
+            <ImageView
+                android:layout_marginTop="@dimen/px50"
+                android:id="@+id/iv_product"
+                android:layout_width="167dp"
+                android:layout_height="170dp"
+                android:background="@mipmap/query_product_information"
+                app:layout_constraintLeft_toRightOf="@+id/iv_materiel"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fy_zxing" />
+
+            <TextView
+                style="@style/Tv15black"
+                android:text="@string/product_information"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_product"
+                app:layout_constraintLeft_toLeftOf="@+id/iv_product"
+                app:layout_constraintRight_toRightOf="@+id/iv_product"
+                app:layout_constraintTop_toTopOf="@+id/iv_product"
+                app:layout_constraintVertical_bias="0.805" />
+
+            <ImageView
+                android:id="@+id/iv_work"
+                android:layout_width="167dp"
+                android:layout_height="170dp"
+                android:background="@mipmap/query_station_information"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/iv_statistics"
+                app:layout_constraintTop_toBottomOf="@+id/iv_materiel" />
+
+
+            <TextView
+                style="@style/Tv15black"
+                android:text="@string/station_information"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_work"
+                app:layout_constraintLeft_toLeftOf="@+id/iv_work"
+                app:layout_constraintRight_toRightOf="@+id/iv_work"
+                app:layout_constraintTop_toTopOf="@+id/iv_work"
+                app:layout_constraintVertical_bias="0.805" />
+
+            <ImageView
+                android:id="@+id/iv_statistics"
+                android:layout_width="167dp"
+                android:layout_height="170dp"
+                android:background="@mipmap/query_statistical_report"
+                app:layout_constraintLeft_toRightOf="@+id/iv_work"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_product" />
+
+            <TextView
+                style="@style/Tv15black"
+                android:text="@string/statistical_report"
+                app:layout_constraintBottom_toBottomOf="@+id/iv_statistics"
+                app:layout_constraintLeft_toLeftOf="@+id/iv_statistics"
+                app:layout_constraintRight_toRightOf="@+id/iv_statistics"
+                app:layout_constraintTop_toTopOf="@+id/iv_statistics"
+                app:layout_constraintVertical_bias="0.805" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+</layout>

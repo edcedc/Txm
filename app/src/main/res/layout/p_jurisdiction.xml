@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_gravity="center"
+    android:id="@+id/fy_popup"
+    android:layout_height="wrap_content">
+
+    <com.flyco.roundview.RoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/px120"
+        android:layout_marginRight="@dimen/px120"
+        android:orientation="vertical"
+        app:rv_backgroundColor="@color/white"
+        app:rv_cornerRadius="@dimen/px10">
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/tv_title"
+            android:gravity="center"
+            android:text="您没有权限进行此项操作"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/px50" />
+
+
+        <com.flyco.roundview.RoundTextView
+            android:id="@+id/tv_submit"
+            android:gravity="center"
+            android:text="确定"
+            android:layout_marginBottom="@dimen/px30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:padding="@dimen/px10"
+            android:ems="4"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            app:rv_cornerRadius="@dimen/px20"
+            app:rv_backgroundColor="@color/blue_26A4E1"/>
+
+
+
+    </com.flyco.roundview.RoundLinearLayout>
+
+</FrameLayout>

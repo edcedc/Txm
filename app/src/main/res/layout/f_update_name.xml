@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/gray_ffeff0f0"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_set"
+                android:layout_margin="@dimen/px30"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@mipmap/setup_icon_modify"
+                android:layout_width="@dimen/px40"
+                android:layout_height="@dimen/px40" />
+
+            <TextView
+                android:id="@+id/tv_set"
+                android:layout_marginLeft="@dimen/px30"
+                android:layout_marginTop="@dimen/px30"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_set"
+                android:text="@string/update_name"
+                style="@style/Tv15blue" />
+
+            <LinearLayout
+                android:id="@+id/ly_image"
+                android:layout_marginTop="@dimen/px30"
+                android:padding="@dimen/px30"
+                app:layout_constraintTop_toBottomOf="@+id/iv_set"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="@string/orporate_name"
+                    style="@style/Tv15black" />
+
+                 <com.fanwang.txm.weight.ContainsEmojiEditText
+                     android:id="@+id/et_etid"
+                     android:textSize="@dimen/size32"
+                     android:layout_marginLeft="@dimen/px30"
+                     android:hint="@string/please_company_name"
+                     android:layout_width="0dp"
+                     android:inputType="text"
+                     android:layout_height="wrap_content"
+                     android:layout_weight="1"
+                     android:background="@null"/>
+
+            </LinearLayout>
+
+            <com.flyco.roundview.RoundTextView
+                android:id="@+id/tv_submit"
+                style="@style/RoundBlueTextView"
+                android:layout_marginTop="@dimen/px80"
+                android:layout_marginLeft="@dimen/px50"
+                android:layout_marginRight="@dimen/px50"
+                android:text="@string/preservation"
+                app:layout_constraintTop_toBottomOf="@+id/ly_image"
+                app:rv_backgroundColor="@color/blue_26A4E1"
+                app:rv_backgroundPressColor="@color/blue_2486B6"
+                app:rv_cornerRadius="@dimen/px10"/>
+
+
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>
+

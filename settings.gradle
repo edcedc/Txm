@@ -1,0 +1,1 @@
+include ':app',':easyrecyclerview',':loaddatalayout','ToprightmenuLibrary','zxinglite'

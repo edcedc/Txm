@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="vertical">
+
+        <include layout="@layout/include_top" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:background="@color/gray_ffeff0f0"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_set"
+                android:layout_margin="@dimen/px30"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@mipmap/setup_icon_setup"
+                android:layout_width="@dimen/px40"
+                android:layout_height="@dimen/px40" />
+
+            <TextView
+                android:id="@+id/tv_set"
+                android:layout_marginLeft="@dimen/px30"
+                android:layout_marginTop="@dimen/px30"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toRightOf="@+id/iv_set"
+                android:text="@string/set"
+                style="@style/Tv15blue" />
+
+            <LinearLayout
+                android:id="@+id/ly_image"
+                android:layout_marginTop="@dimen/px30"
+                android:padding="@dimen/px30"
+                app:layout_constraintTop_toBottomOf="@+id/iv_set"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="@string/orporate_image"
+                    style="@style/Tv15black" />
+
+                <ImageView
+                    android:id="@+id/iv_image"
+                    android:layout_marginRight="@dimen/px30"
+                    android:src="@mipmap/setup_img"
+                    android:scaleType="fitXY"
+                    android:layout_width="@dimen/px120"
+                    android:layout_height="@dimen/px120" />
+
+                <ImageView
+                    android:background="@mipmap/aa77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_logo"
+                android:layout_marginTop="@dimen/px30"
+                android:padding="@dimen/px30"
+                app:layout_constraintTop_toBottomOf="@+id/ly_image"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="@string/orporate_logo"
+                    style="@style/Tv15black" />
+
+                <com.fanwang.txm.weight.CircleImageView
+                    android:id="@+id/iv_logo"
+                    android:layout_marginRight="@dimen/px30"
+                    android:src="@mipmap/setup_img1"
+                    android:layout_width="@dimen/px120"
+                    android:layout_height="@dimen/px120" />
+
+                <ImageView
+                    android:background="@mipmap/aa77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_name"
+                android:layout_marginTop="@dimen/px30"
+                android:paddingLeft="@dimen/px30"
+                android:paddingRight="@dimen/px30"
+                android:paddingTop="@dimen/px50"
+                android:paddingBottom="@dimen/px50"
+                app:layout_constraintTop_toBottomOf="@+id/ly_logo"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="@string/orporate_name"
+                    style="@style/Tv15black" />
+
+                <ImageView
+                    android:background="@mipmap/aa77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ly_pwd"
+                android:layout_marginTop="@dimen/px30"
+                android:paddingLeft="@dimen/px30"
+                android:paddingRight="@dimen/px30"
+                android:paddingTop="@dimen/px50"
+                android:paddingBottom="@dimen/px50"
+                app:layout_constraintTop_toBottomOf="@+id/ly_name"
+                android:background="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:text="@string/password_modification"
+                    style="@style/Tv15black" />
+
+                <ImageView
+                    android:background="@mipmap/aa77"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+
+    </LinearLayout>
+</layout>
+
